@@ -1,5 +1,5 @@
 [package]
-name = "vec-2d"
+name = "board"
 version = "0.1.0"
 authors = ["jvdwrf"]
 edition = "2018"
