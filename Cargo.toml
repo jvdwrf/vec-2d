@@ -7,7 +7,7 @@ description = "A simple crate for creating a single vector with coordinate based
 readme = "README.md"
 repository = "https://github.com/jvdwrf/vec-2d"
 license = "Apache-2.0"
-keywords = ["array", "vector", "2d", "board", "gamefield"]
+keywords = ["vector", "vec", "2d", "vec-2d", "gamefield"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

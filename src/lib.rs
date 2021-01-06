@@ -54,22 +54,22 @@ impl<T: Clone> Vec2d<T> {
         self.tiles.iter_mut().for_each(fun);
     }
 
-    /// Get a &Vec<Tile> of the Vec2d<Tile>
+    /// Get a `&Vec<Tile>` of the `Vec2d<Tile>`
     pub fn tiles(&self) -> &Vec<T> {
         &self.tiles
     }
 
-    /// Get the height of the Vec2d
+    /// Get the height of the `Vec2d`
     pub fn height(&self) -> usize {
         self.height
     }
 
-    /// Get the width of the Vec2d
+    /// Get the width of the `Vec2d`
     pub fn width(&self) -> usize {
         self.width
     }
 
-    /// Get an Option<&Tile> at (x, y)
+    /// Get an `Option<&Tile>` at `(x, y)`
     /// # Examples
     /// ```
     /// let mut board = vec_2d::Vec2d::new(&'a', 2, 3);
