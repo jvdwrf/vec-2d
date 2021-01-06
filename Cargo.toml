@@ -1,7 +1,7 @@
 [package]
 name = "vec-2d"
 version = "0.1.0"
-authors = ["Jasper van der Werf <jaspervdwerf@gmail.com>"]
+authors = ["jvdwrf"]
 edition = "2018"
 description = "A simple crate for creating a single vector with coordinate based access, and a few nice functions for easy use."
 readme = "README.md"
