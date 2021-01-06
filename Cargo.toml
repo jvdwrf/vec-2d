@@ -5,6 +5,9 @@ authors = ["Jasper van der Werf <jaspervdwerf@gmail.com>"]
 edition = "2018"
 description = "A simple crate for creating a single vector with coordinate based access, and a few nice functions for easy use."
 readme = "README.md"
+repository = "https://github.com/jvdwrf/vec-2d"
+license = "Apache-2.0"
+keywords = ["array", "vector", "2d", "board", "game", "gamefield"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
