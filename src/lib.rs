@@ -1,5 +1,5 @@
 //! A simple `Vec` wrapper that is accessible as if it were a 2d vector.
-//! Implements `Index<(x, y)` and `IndexMut<(x, y)>.
+//! Implements `Index<(x, y)>` and `IndexMut<(x, y)>`.
 //!
 //! The underlying `Vec` is only mutably accessible through methods of `Vec2d`.
 //! If you want ownership of `Vec`, consume the `Vec2d` with `to_vec`.
@@ -10,6 +10,7 @@ pub mod vec2d_error;
 pub type Pos = (usize, usize);
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
+/// 
 pub struct Vec2d<T: Clone> {
     tiles: Vec<T>,
     width: usize
@@ -92,11 +93,13 @@ impl<T: Clone> Vec2d<T> {
     }
 
     /// Get the height of the `Vec2d`
+    /// 
     pub fn height(&self) -> usize {
         self.tiles.len() / self.width()
     }
 
     /// Get the width of the `Vec2d`
+    /// 
     pub fn width(&self) -> usize {
         self.width
     }
