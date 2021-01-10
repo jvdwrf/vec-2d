@@ -1,6 +1,6 @@
 [package]
 name = "board"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["jvdwrf"]
 edition = "2018"
 description = "A simple crate for creating a single vector with coordinate based access, and a few nice functions for easy use."
@@ -12,3 +12,4 @@ keywords = ["vector", "vec", "2d", "vec2d", "gamefield"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+serde = { version = "1.0", features = ["derive"] }

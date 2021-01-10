@@ -6,10 +6,11 @@
 
 use std::ops::{Index, IndexMut};
 use vec2d_error::Vec2dError;
+use serde::{Serialize, Deserialize};
 pub mod vec2d_error;
 pub type Pos = (usize, usize);
 
-#[derive(Debug, Clone, PartialEq, Eq, Hash)]
+#[derive(Debug, Clone, PartialEq, Eq, Hash, Serialize, Deserialize)]
 /// 
 pub struct Vec2d<T: Clone> {
     tiles: Vec<T>,
