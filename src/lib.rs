@@ -130,6 +130,16 @@ impl<T: Clone> Vec2d<T> {
         self.tiles.get_mut(y * self.width + x)
     }
 
+    pub fn get_row(&self, y: usize) -> Option<&[T]> {
+        if y >= self.tiles.len() / self.width { return None }
+        Some(&self.tiles[y * self.width .. (y+1) * self.width])
+    }
+
+    pub fn get_row_mut(&mut self, y: usize) -> Option<&mut [T]> {
+        if y >= self.tiles.len() / self.width { return None }
+        Some(&mut self.tiles[y * self.width .. (y+1) * self.width])
+    }
+
     /// Get an iterator over all `(x, y)` values: `Iterator<Item = (usize, Iterator<Item = usize>)>`
     /// # Examples
     /// ```
@@ -144,6 +154,18 @@ impl<T: Clone> Vec2d<T> {
         let width = self.width;
         let height = self.height();
         (0..width).map(move |i|(i, 0..height))
+    }
+
+    pub fn iter_rows(&self) -> impl Iterator<Item = &[T]> {
+        self.tiles
+            .rchunks(self.width)
+            .into_iter()
+    }
+
+    pub fn iter_rows_mut(&mut self) -> impl Iterator<Item = &mut [T]> {
+        self.tiles
+            .rchunks_mut(self.width)
+            .into_iter()
     }
 
     /// Iterate over: `((x, y), &Tile)`

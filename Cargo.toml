@@ -1,6 +1,6 @@
 [package]
 name = "board"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["jvdwrf"]
 edition = "2018"
 description = "A simple crate for creating a single vector with coordinate based access, and a few nice functions for easy use."
